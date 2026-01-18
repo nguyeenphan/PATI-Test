@@ -1,0 +1,36 @@
+/* Responsive Styles
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .video-slider .slick-prev {
+        left: -40px;
+    }
+
+    .video-slider .slick-next {
+        right: -40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-slider .slick-prev,
+    .video-slider .slick-next {
+        width: 32px;
+        height: 32px;
+        bottom: -50px !important;
+    }
+
+    .video-slider .slick-prev {
+        left: auto !important;
+        right: 40px;
+    }
+
+    .video-slider .slick-next {
+        right: 0;
+        left: auto !important;
+    }
+
+    .video-slider .slick-dots {
+        width: calc(100% - 90px) !important;
+        bottom: -45px !important;
+    }
+}

@@ -1,0 +1,76 @@
+/* Product Gallery
+   ========================================================================== */
+
+/* Main image with gradient background */
+.main_product-image {
+    position: relative;
+    background: linear-gradient(135deg, #d4e8e0, #a8d5c3);
+    border-radius: 12px;
+    overflow: visible;
+}
+
+/* Nutrition info icons */
+.main_product-nutrition-info img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Best Fitness badge - top right corner */
+.main-producT_bf_badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 120px;
+    height: auto;
+    z-index: 10;
+}
+
+
+/* Image Grids
+   ========================================================================== */
+
+/* Two-column grid for secondary images */
+.main_product-2nd,
+.main_product-3rd {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.main_product-2nd img,
+.main_product-3rd img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Three-column grid (desktop) */
+.main_product-3rd {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.main_product-2nd.bottom {
+    margin-top: 16px;
+}
+
+
+/* Responsive
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* Reduce to 2 columns on mobile */
+    .main_product-3rd {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main_product-nutrition-info {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    /* Smaller badge on mobile */
+    .main-producT_bf_badge {
+        width: 80px;
+    }
+}

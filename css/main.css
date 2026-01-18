@@ -1,0 +1,477 @@
+/* Global Styles
+   ========================================================================== */
+
+/* Smooth font rendering */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Animations & Keyframes
+   ========================================================================== */
+
+/* Fade in from bottom - used for scroll reveal effects */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Subtle pulse for sale badges and CTAs */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.animate-pulse-subtle {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Shimmer loading effect */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* Mobile menu slide animation */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.3s ease-out;
+}
+
+/* Auto-scrolling logos for press/partner section */
+@keyframes scroll-logos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* Product Gallery
+   ========================================================================== */
+
+/* Main product images - inherits Shopify theme variables */
+.main_product-images {
+    box-sizing: inherit;
+    display: block;
+    font-size: 1.6rem;
+    line-height: calc(1 + 0.8 / var(--font-body-scale));
+    font-family: var(--font-body-family);
+    font-weight: var(--font-body-weight);
+    color: rgba(var(--color-foreground), 0.75);
+}
+
+/* Thumbnail hover - slight scale with green shadow */
+.thumbnail-item {
+    transition: all 0.3s ease;
+}
+
+.thumbnail-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 138, 106, 0.2);
+}
+
+
+/* Form Elements
+   ========================================================================== */
+
+/* Custom radio buttons with brand green */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 26px;
+    height: 26px;
+    border: 2px solid #008a6a;
+    border-radius: 50%;
+    outline: none !important;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="radio"]:focus {
+    outline: none !important;
+    outline-offset: 0 !important;
+    box-shadow: none !important;
+}
+
+input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #008a6a;
+}
+
+/* Focus styles for accessibility */
+input:focus,
+a:focus {
+    outline: 2px solid #008a6a;
+    outline-offset: 2px;
+}
+
+
+/* Bundle & Pricing
+   ========================================================================== */
+
+.bundle-option {
+    transition: all 0.3s ease;
+}
+
+.bundle-option:hover {
+    box-shadow: 0 4px 12px rgba(0, 138, 106, 0.15);
+}
+
+
+/* Accordions
+   ========================================================================== */
+
+/* FAQ accordion with smooth height transition */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.faq-answer:not(.hidden) {
+    max-height: 500px;
+    transition: max-height 0.3s ease-in, padding 0.3s ease-in;
+}
+
+/* Rotate icons on expand/collapse */
+.faq-question svg {
+    transition: transform 0.3s ease;
+}
+
+.faq-question svg.rotate-180 {
+    transform: rotate(180deg);
+}
+
+
+/* Utility Components
+   ========================================================================== */
+
+/* Header with smooth shadow on scroll */
+header {
+    transition: box-shadow 0.3s ease;
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(135deg, #008a6a 0%, #00c896 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Card hover with lift effect */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Lazy loading images - fade in when loaded */
+img {
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"] {
+    opacity: 0;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+
+/* Video & Media
+   ========================================================================== */
+
+/* Responsive 16:9 video embed */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Hide scrollbar for horizontal carousel */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Press Logos
+   ========================================================================== */
+
+.logo-scroll-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.logo-scroll-track {
+    display: flex;
+    gap: 4rem;
+    animation: scroll-logos 30s linear infinite;
+    width: fit-content;
+}
+
+.logo-scroll-track:hover {
+    animation-play-state: paused;
+}
+
+.press-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.press-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+
+/* Slick Carousel Integration
+   ========================================================================== */
+
+/* Desktop video carousel */
+.video-carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.video-slider {
+    margin: 0 -10px;
+}
+
+.video-slide {
+    padding: 0 10px;
+    outline: none;
+}
+
+.video-slide video {
+    pointer-events: auto;
+}
+
+/* Navigation arrows - positioned at bottom right */
+.video-slider .slick-prev,
+.video-slider .slick-next {
+    position: absolute;
+    top: auto !important;
+    bottom: -55px !important;
+    transform: none !important;
+    z-index: 10;
+    width: 40px;
+    height: 48px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+.video-slider .slick-prev:before,
+.video-slider .slick-next:before {
+    display: none;
+}
+
+.video-slider .slick-prev {
+    left: auto !important;
+    right: 50px;
+}
+
+.video-slider .slick-next {
+    right: 0;
+}
+
+.video-slider .slick-prev img,
+.video-slider .slick-next img {
+    width: 20px !important;
+    height: 20px !important;
+    display: block !important;
+    opacity: 1 !important;
+    position: relative !important;
+    margin: 0 !important;
+    z-index: 2 !important;
+}
+
+.video-slider .slick-next img {
+    transform: rotate(180deg) !important;
+}
+
+.video-slider .slick-prev:hover img,
+.video-slider .slick-next:hover img {
+    opacity: 0.7 !important;
+}
+
+/* Progress bar style dots */
+.video-slider .slick-dots {
+    bottom: -50px;
+    display: flex !important;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: calc(100% - 110px) !important;
+    left: 0;
+    text-align: left;
+}
+
+.video-slider .slick-dots li {
+    margin: 0;
+    flex: 1;
+    max-width: 80px;
+}
+
+.video-slider .slick-dots li:first-child button {
+    border-radius: 4px 0 0 4px;
+}
+
+.video-slider .slick-dots li:last-child button {
+    border-radius: 0 4px 4px 0;
+}
+
+.video-slider .slick-dots li button {
+    width: 100%;
+    height: 4px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: #e5e7eb;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.video-slider .slick-dots li.slick-active button {
+    background: #10b981;
+    height: 4px;
+}
+
+/* Mobile gallery - remove default arrow content */
+.mobile-main-slider .slick-prev:before,
+.mobile-main-slider .slick-next:before {
+    display: none !important;
+}
+
+/* Mobile thumbnail active states */
+.mobile-thumb-slider .slick-slide img {
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.mobile-thumb-slider .slick-current img {
+    border-color: #10b981 !important;
+    opacity: 1;
+}
+
+
+/* Responsive Styles
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .video-slider .slick-prev {
+        left: -40px;
+    }
+
+    .video-slider .slick-next {
+        right: -40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-slider .slick-prev,
+    .video-slider .slick-next {
+        width: 32px;
+        height: 32px;
+        bottom: -50px !important;
+    }
+
+    .video-slider .slick-prev {
+        left: auto !important;
+        right: 40px;
+    }
+
+    .video-slider .slick-next {
+        right: 0;
+        left: auto !important;
+    }
+
+    .video-slider .slick-dots {
+        width: calc(100% - 90px) !important;
+        bottom: -45px !important;
+    }
+}

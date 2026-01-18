@@ -1,0 +1,49 @@
+/* Video & Media Components
+   ========================================================================== */
+
+/* Responsive 16:9 video embed */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Hide scrollbar for horizontal carousel */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* Desktop video carousel */
+.video-carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.video-slider {
+    margin: 0 -10px;
+}
+
+.video-slide {
+    padding: 0 10px;
+    outline: none;
+}
+
+.video-slide video {
+    pointer-events: auto;
+}

@@ -1,0 +1,77 @@
+/* Form Elements
+   ========================================================================== */
+
+/* Custom radio buttons with brand green */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 26px;
+    height: 26px;
+    border: 2px solid #008a6a;
+    border-radius: 50%;
+    outline: none !important;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="radio"]:focus {
+    outline: none !important;
+    outline-offset: 0 !important;
+    box-shadow: none !important;
+}
+
+input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #008a6a;
+}
+
+/* Focus styles for accessibility */
+input:focus,
+a:focus {
+    outline: 2px solid #008a6a;
+    outline-offset: 2px;
+}
+
+
+/* Bundle & Pricing
+   ========================================================================== */
+
+.bundle-option {
+    transition: all 0.3s ease;
+}
+
+.bundle-option:hover {
+    box-shadow: 0 4px 12px rgba(0, 138, 106, 0.15);
+}
+
+
+/* Accordions
+   ========================================================================== */
+
+/* FAQ accordion with smooth height transition */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.faq-answer:not(.hidden) {
+    max-height: 500px;
+    transition: max-height 0.3s ease-in, padding 0.3s ease-in;
+}
+
+/* Rotate icons on expand/collapse */
+.faq-question svg {
+    transition: transform 0.3s ease;
+}
+
+.faq-question svg.rotate-180 {
+    transform: rotate(180deg);
+}
