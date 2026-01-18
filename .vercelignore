@@ -1,6 +1,5 @@
 node_modules
 .git
-src
 README.md
 package-lock.json
 postcss.config.js
