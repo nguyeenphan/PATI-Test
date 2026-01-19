@@ -1,6 +1,25 @@
 /* Responsive Styles
    ========================================================================== */
 
+/* Desktop/Mobile Display Classes */
+.Mobile_only {
+    display: none !important;
+}
+
+.Desktop_only {
+    display: block !important;
+}
+
+@media (max-width: 768px) {
+    .Mobile_only {
+        display: block !important;
+    }
+    
+    .Desktop_only {
+        display: none !important;
+    }
+}
+
 @media (max-width: 1024px) {
     .video-slider .slick-prev {
         left: -40px;

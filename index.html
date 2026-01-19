@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/video.css">
     <link rel="stylesheet" href="css/slick-carousel.css">
+    <link rel="stylesheet" href="css/nutrition-popup.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
@@ -44,8 +45,8 @@
                     <img loading="eager" class="rounded-lg"
                         src="https://trysculptique.com/cdn/shop/files/LymoPDPImagesArtboard1_8e287aa1-576e-42b1-9a87-ce2fcdaded3a.jpg?v=1760103674"
                         alt="Sculptique Product">
-                    <div
-                        class="absolute bottom-8 left-1/2 -translate-x-1/2 z-[2] flex justify-center gap-2 leading-[1.2em] max-w-[290px] px-6 py-2 bg-[#ffffffd9] border border-black rounded-[24px] cursor-pointer text-[14px]">
+                    <div id="nutrition-popup-trigger"
+                        class="absolute bottom-8 left-1/2 -translate-x-1/2 z-[2] flex justify-center gap-2 leading-[1.2em] max-w-[290px] px-6 py-2 bg-[#ffffffd9] border border-black rounded-[24px] cursor-pointer text-[14px] transition-colors">
                         <img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/leaves_1247958_1_cf2e7df4-c113-4c3a-be49-f876ec94d873.png?v=1766822629"
                             alt="Nutrition" class="w-[24px] h-[24px]">
                         <span class="font-size-[14px] text-center mt-1 font-[400]">Nutritional
@@ -2178,8 +2179,71 @@
         </div>
     </section>
 
+    <!-- Nutrition Popup Modal -->
+    <div id="nutrition-popup" class="nutrition_popup-outer">
+        <div class="nutrition_popup-inner">
+            <img loading="lazy" class="nutrition_popup-close" id="nutrition-popup-close"
+                src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Button_To_Expand.png?v=1752069152"
+                alt="Close">
+            <h2 class="main_product-title centered">Nutritional Information</h2>
+            <img class="Desktop_only nutrition_image"
+                src="https://trysculptique.com/cdn/shop/files/ingredients-min.png?v=1758713223"
+                alt="Nutrition Facts Desktop">
+            <img class="Mobile_only nutrition_image"
+                src="https://trysculptique.com/cdn/shop/files/ingredients-min.png?v=1758713223"
+                alt="Nutrition Facts Mobile">
+
+            <a href="#MainContent" class="main_product-btn">
+                Try Lymphatic Drainage Risk-Free
+            </a>
+
+            <div class="main_product-points">
+                <div class="main_product-point-line">
+                    <div>
+                        <img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Mark_Icon_ce1ad4c9-5ec0-4162-969e-b565980ab82b.png?v=1752127285"
+                            alt="Check">
+                    </div>
+                    <div>
+                        <p>Made &amp; produced in the USA</p>
+                    </div>
+                </div>
+
+                <div class="main_product-point-line">
+                    <div>
+                        <img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Mark_Icon_ce1ad4c9-5ec0-4162-969e-b565980ab82b.png?v=1752127285"
+                            alt="Check">
+                    </div>
+                    <div>
+                        <p>100% Natural Ingredients</p>
+                    </div>
+                </div>
+
+                <div class="main_product-point-line">
+                    <div>
+                        <img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Mark_Icon_ce1ad4c9-5ec0-4162-969e-b565980ab82b.png?v=1752127285"
+                            alt="Check">
+                    </div>
+                    <div>
+                        <p>60-Day Money-Back Guarantee</p>
+                    </div>
+                </div>
+
+                <div class="main_product-point-line">
+                    <div>
+                        <img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Mark_Icon_ce1ad4c9-5ec0-4162-969e-b565980ab82b.png?v=1752127285"
+                            alt="Check">
+                    </div>
+                    <div>
+                        <p>Free Shipping</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/nutrition-popup.js"></script>
     <script src="js/main.js"></script>
 </main>
 

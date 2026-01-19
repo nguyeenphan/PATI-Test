@@ -1,0 +1,154 @@
+/* Nutrition Popup Styles
+   ========================================================================== */
+
+.nutrition_popup-outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.nutrition_popup-outer.active {
+  display: flex;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.nutrition_popup-inner img {
+  width: 100%;
+}
+
+.nutrition_popup-inner {
+  width: 100%;
+  max-width: 450px;
+  padding: 16px;
+  border-radius: 12px;
+  position: relative;
+  background: white;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease-out;
+}
+
+.nutrition_popup-inner img.nutrition_popup-close {
+  position: absolute;
+  width: 24px;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  border-radius: 50%;
+  border: 1px solid #d5416e;
+  transition: transform 0.2s ease;
+}
+
+.nutrition_popup-inner img.nutrition_popup-close:hover {
+  transform: rotate(45deg) scale(1.1);
+}
+
+.nutrition_popup-inner .main_product-title {
+  margin-top: 0;
+  font-family: 'Lora', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.centered {
+  text-align: center;
+}
+
+.main_product-btn {
+  display: block;
+  padding: 20px;
+  cursor: pointer;
+  margin: 16px 0;
+  background: black;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.main_product-btn:hover {
+  background: #333;
+}
+
+.main_product-point-line {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.main_product-point-line > div:nth-child(1) {
+  width: 16px;
+  display: flex;
+}
+
+.main_product-point-line p {
+  font-size: 12px !important;
+  margin: 0;
+  line-height: 1.3em;
+  color: #333;
+}
+
+.main_product-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.nutrition_image {
+  display: block;
+  border-radius: 8px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media only screen and (max-width: 678px) {
+  .main_product-btn {
+    font-size: 16px;
+    padding: 18px;
+  }
+  .main_product-points {
+    justify-content: flex-start;
+  }
+  .nutrition_popup-outer {
+    padding: 12px;
+  }
+  .nutrition_popup-inner {
+    max-width: 100%;
+  }
+  .nutrition_popup-inner .main_product-title {
+    font-size: 20px;
+  }
+}

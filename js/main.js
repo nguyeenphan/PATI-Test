@@ -464,4 +464,5 @@ document.addEventListener("DOMContentLoaded", function () {
   initVideoCarouselScroll();
   initSlickCarousels();
   initVideoControls();
+  initNutritionPopup();
 });
