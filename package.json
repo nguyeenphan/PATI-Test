@@ -4,9 +4,9 @@
     "description": "Pixel-perfect clone of Sculptique product page",
     "scripts": {
         "dev": "tailwindcss -i ./src/input.css -o ./dist/tailwind.css --watch",
-        "build": "tailwindcss -i ./src/input.css -o ./dist/tailwind.css --minify",
+        "start": "tailwindcss -i ./src/input.css -o ./dist/tailwind.css --minify",
         "web": "npx http-server -p 8080 -o /index.html",
-        "start": "npx concurrently \"npm run dev\" \"npm run web\""
+        "build": "npx concurrently \"npm run start\" \"npm run web\""
     },
     "author": "",
     "license": "MIT",
